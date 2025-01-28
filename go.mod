@@ -1,4 +1,4 @@
-module affiliate-support
+module my-game-progress
 
 go 1.23
 
