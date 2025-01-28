@@ -1,0 +1,32 @@
+[
+    {
+        "year": 2022,
+        "title": "Total War: Warhammer 3",
+        "genre": "Grand Strategy",
+        "remark": "Epic conclusion to the Warhammer trilogy",
+        "gameImage": {
+            "icon": "https://example.com/icons/total-war-warhammer-3-icon.jpg",
+            "cover": "https://example.com/covers/total-war-warhammer-3-cover.jpg"
+        }
+    },
+    {
+        "year": 2022,
+        "title": "Soul Hackers 2",
+        "genre": "JRPG",
+        "remark": "Sequel to the cult classic",
+        "gameImage": {
+            "icon": "https://example.com/icons/soul-hackers-2-icon.jpg",
+            "cover": "https://example.com/covers/soul-hackers-2-cover.jpg"
+        }
+    },
+    {
+        "year": 2001,
+        "title": "Serious Sam: The First Encounter",
+        "genre": "FPS",
+        "remark": "Classic fast-paced action shooter",
+        "gameImage": {
+            "icon": "https://example.com/icons/serious-sam-first-encounter-icon.jpg",
+            "cover": "https://example.com/covers/serious-sam-first-encounter-cover.jpg"
+        }
+    }
+]
