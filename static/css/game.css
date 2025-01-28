@@ -7,7 +7,7 @@ h1 {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 25px;
     max-width: 1200px;
     margin: 0 auto;
@@ -19,8 +19,8 @@ h1 {
 }
 
 .book-cover {
-    width: 260px;
-    height: 340px;
+    width: 200px;
+    height: 280px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
