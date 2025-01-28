@@ -7,6 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 
 	"my-game-progress/database"
+	"my-game-progress/service"
 )
 
 type Package struct {
@@ -39,51 +40,32 @@ func main() {
 	api := r.Group("api")
 	r.Static("/static", "./static")
 	r.GET("/", func(c *gin.Context) {
-		log.Print("Hello")
-		c.HTML(http.StatusOK, "index.html", nil)
+		games, err := service.GetGameList()
+		if err != nil {
+			log.Fatalf("Failed to get game list: %v", err)
+			c.JSON(http.StatusInternalServerError, gin.H{
+				"error":   "Internal Server Error",
+				"message": err.Error(),
+			})
+		}
+		c.HTML(http.StatusOK, "index.html", gin.H{
+			"games": games,
+		})
 	})
 
 	api.GET("/game", func(c *gin.Context) {
-		gameCollection := database.DB.Collection("Game")
-
-		games, err := database.Fetch(gameCollection)
+		games, err := service.GetGameList()
 		if err != nil {
-			log.Fatalf("Failed to fetch games: %v", err)
+			log.Fatalf("Failed to get game list: %v", err)
+			c.JSON(http.StatusInternalServerError, gin.H{
+				"error":   "Internal Server Error",
+				"message": err.Error(),
+			})
 		}
-
-		res := gin.H{
+		c.JSON(http.StatusOK, gin.H{
 			"games": games,
-		}
-
-		c.JSON(http.StatusOK, res)
+		})
 	})
 
-	// r.GET("/money", func(c *gin.Context) {
-	// 	c.HTML(http.StatusOK, "top-up-redirect.html", nil)
-	// })
-	// n.GET("/internet", func(c *gin.Context) {
-
-	// 	file, err := os.Open("static/json/package-list.json")
-	// 	if err != nil {
-	// 		fmt.Println("Error opening file:", err)
-	// 		return
-	// 	}
-	// 	defer file.Close()
-
-	// 	var data map[string][]Package
-	// 	decoder := json.NewDecoder(file)
-	// 	if err := decoder.Decode(&data); err != nil {
-	// 		fmt.Println("Error decoding JSON:", err)
-	// 		return
-	// 	}
-
-	// 	// Extract the package list
-	// 	packages := data["packageList"]
-	// 	for i := range packages {
-	// 		packages[i].ConditionLength = len(packages[i].ConditionList)
-	// 		packages[i].PackageIndex = i
-	// 	}
-	// 	c.HTML(http.StatusOK, "package-offer.html", gin.H{"packages": packages})
-	// })
 	r.Run(":" + "4200")
 }

@@ -5,9 +5,9 @@ import (
 )
 
 type Game struct {
-	year      int       `json:"year"`
-	title     string    `json:"title"`
-	genre     string    `json:"genre"`
+	Year      int       `json:"year"`
+	Title     string    `json:"title"`
+	Genre     string    `json:"genre"`
 	Remark    string    `json:"remark"`
 	GameImage GameImage `json:"gameImage"`
 }

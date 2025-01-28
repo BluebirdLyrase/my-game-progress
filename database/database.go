@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"log"
-	"time"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -17,18 +16,18 @@ var DB *mongo.Database
 
 func Init() error {
 	// Create a context with a timeout
-	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	ctx := context.Background()
 
 	// Create a MongoDB client
-	client, err := mongo.Connect(ctx, options.Client().ApplyURI("mongodb://localhost:27017"))
+	client, err := mongo.Connect(ctx, options.Client().ApplyURI("mongodb://127.0.0.1:27017"))
 	if err != nil {
-		cancel() // Clean up context if connection fails
+		CloseConnection() // Clean up context if connection fails
 		return fmt.Errorf("failed to connect to MongoDB: %w", err)
 	}
 
 	// Verify the connection
 	if err := client.Ping(ctx, nil); err != nil {
-		cancel()
+		CloseConnection()
 		return fmt.Errorf("failed to ping MongoDB: %w", err)
 	}
 
@@ -38,6 +37,14 @@ func Init() error {
 	Context = ctx
 	// collection := database.Collection("Game")
 	return nil
+}
+
+// CloseConnection gracefully shuts down the MongoDB connection.
+func CloseConnection() {
+	if err := Client.Disconnect(context.Background()); err != nil {
+		log.Fatalf("Error disconnecting from MongoDB: %v", err)
+	}
+	log.Println("MongoDB connection closed")
 }
 
 func Fetch(collection *mongo.Collection) ([]bson.M, error) {

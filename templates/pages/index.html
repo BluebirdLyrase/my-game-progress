@@ -4,16 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Page</title>
+    <link rel="stylesheet" href="static/css/game.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>My Gaming Progress</title>
 </head>
 
 <body>
-    asdsadasdasd
-    <h1>Index Page</h1>
-    <button hx-get="/data" hx-target="#content">Index Page</button>
-    <div id="content">
-        HIIIsadsadsadsadsadsadsad
-        <!-- Content will be loaded here -->
+    <h1>Most Recent</h1>
+    <div class="gallery">
+        {{range .games}}
+        <div class="book-cover" style="background-image: url({{.GameImage.Cover }});"><span>{{.Title}}</span></div>
+        {{end}}
     </div>
 </body>
 
