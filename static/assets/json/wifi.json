@@ -1,0 +1,91 @@
+﻿{
+   "data":[
+      {
+         "id":1,
+         "category":"",
+         "type":"both",
+         "day":[
+            {
+               "id":1,
+               "promotion":"",
+               "ussd":"*777*380# ",
+               "detail":"AIS wifi 1 ชม 9 บาท",
+               "head":"AIS wifi",
+               "use":"",
+               "time":"1",
+               "unit":"ชั่วโมง",
+               "price":"9",
+               "remark":"",
+               "link":"http://m.ais.co.th/VYHzvdc9"
+            },
+            {
+               "id":2,
+               "promotion":"",
+               "ussd":"*777*381# ",
+               "detail":"AIS wifi 5 ชม 19 บาท",
+               "head":"AIS wifi",
+               "use":"",
+               "time":"5",
+               "unit":"ชั่วโมง",
+               "price":"19",
+               "remark":"",
+               "link":"http://m.ais.co.th/yGHVJ4cE"
+            },
+            {
+               "id":3,
+               "promotion":"",
+               "ussd":"*777*382# ",
+               "detail":"AIS wifi 24 ชม 29 บาท",
+               "head":"AIS wifi",
+               "use":"",
+               "time":"24",
+               "unit":"ชั่วโมง",
+               "price":"29",
+               "remark":"",
+               "link":"http://m.ais.co.th/7LHV9rh8"
+            }
+         ],
+         "month":[
+            {
+               "id":1,
+               "promotion":"",
+               "ussd":"*777*383#",
+               "detail":"AIS wifi ไม่อั้น ใช้งานได้ 30 วัน 69 บาท",
+               "head":"AIS wifi",
+               "use":"ไม่อั้น",
+               "time":"30",
+               "unit":"วัน",
+               "price":"69",
+               "remark":"",
+               "link":"http://m.ais.co.th/OzHpdBTm"
+            },
+            {
+               "id":2,
+               "promotion":"",
+               "ussd":"*777*388#",
+               "detail":"AIS & 3 BB WIFI ไม่อั้น ใช้งานได้ 30 วัน 99 บาท",
+               "head":"AIS & 3 BB WIFI",
+               "use":"ไม่อั้น",
+               "time":"30",
+               "unit":"วัน",
+               "price":"99",
+               "remark":"",
+               "link":"http://m.ais.co.th/DeH0L4u8"
+            },
+            {
+               "id":3,
+               "promotion":"",
+               "ussd":"*777*384#",
+               "detail":"AIS Super WIFI 20 GB ใช้งานได้ 30 วัน 99 บาท",
+               "head":"AIS Super WIFI",
+               "use":"20 GB",
+               "time":"30",
+               "unit":"วัน",
+               "price":"99",
+               "remark":"",
+               "link":"http://m.ais.co.th/oZHj49I4"
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,1291 @@
+﻿{
+   "data":[
+      {
+         "id":1,
+         "category":"แพ๊กเน็ตขายดี! ที่สุดจาก AIS",
+         "type":"both",
+         "day":[
+            {
+               "id":1,
+               "promotion":"prepaid/postpaid",
+               "ussd":"*777*7026#",
+               "detail":"500 MB ใช้งานได้ 1 วัน",
+               "head":"เล่นเน็ต",
+               "use":"500 MB",
+               "time":"1",
+               "unit":"วัน",
+               "price":"19",
+               "remark":"*",
+               "link":"http://m.ais.co.th/RbH6xvSE"
+            },
+            {
+               "id":2,
+               "promotion":"prepaid/postpaid",
+               "ussd":"*777*775#",
+               "detail":"อินเทอร์เน็ต 49 บาท 2 GB 7 วัน",
+               "head":"เล่นเน็ต",
+               "use":"2 GB",
+               "time":"7",
+               "unit":"วัน",
+               "price":"49",
+               "remark":"*",
+               "link":"http://m.ais.co.th/1WHwEnUO"
+            },
+            {
+               "id":3,
+               "promotion":"prepaid/postpaid",
+               "ussd":"*777*776#",
+               "detail":"อินเทอร์เน็ต 99 บาท 4 GB 15 วัน",
+               "head":"เล่นเน็ต",
+               "use":"4 GB",
+               "time":"15",
+               "unit":"วัน",
+               "price":"99",
+               "remark":"*",
+               "link":"http://m.ais.co.th/oZH3aVi4"
+            },
+            {
+               "id":4,
+               "promotion":"prepaid/postpaid",
+               "ussd":"*777*7069#",
+               "detail":"อินเทอร์เน็ต 5 GB 99 บาท 7 วัน",
+               "head":"เล่นเน็ต",
+               "use":"5 GB",
+               "time":"7",
+               "unit":"วัน",
+               "price":"99",
+               "remark":"*",
+               "link":"http://m.ais.co.th/0WHMZ3H8"
+            },
+            {
+               "id":5,
+               "promotion":"prepaid/postpaid",
+               "ussd":"*777*7028#",
+               "detail":"อินเทอร์เน็ต 3 GB 49 บาท 1 วัน",
+               "head":"เล่นเน็ต",
+               "use":"3 GB",
+               "time":"1",
+               "unit":"วัน",
+               "price":"49",
+               "remark":"*",
+               "link":"http://m.ais.co.th/yGHK6EtE"
+            },
+            {
+               "id":6,
+               "promotion":"prepaid/postpaid",
+               "ussd":"*777*7029#",
+               "detail":"2 GB ใช้งานได้ 5 วัน",
+               "head":"เล่นเน็ต",
+               "use":"2 GB",
+               "time":"5",
+               "unit":"วัน",
+               "price":"90",
+               "remark":"*",
+               "link":"http://m.ais.co.th/4RHm01i8"
+            },
+            {
+               "id":7,
+               "promotion":"prepaid/postpaid",
+               "ussd":"*777*7030#",
+               "detail":"4 GB ใช้งานได้ 10 วัน",
+               "head":"เล่นเน็ต",
+               "use":"4 GB",
+               "time":"10",
+               "unit":"วัน",
+               "price":"150",
+               "remark":"*",
+               "link":"http://m.ais.co.th/rxHr97FJ"
+            }
+         ],
+         "month":[
+            {
+               "id":1,
+               "promotion":"prepaid/postpaid",
+               "ussd":"*777*784#",
+               "detail":"อินเทอร์เน็ต 99 บาท 3 GB 30 วัน",
+               "head":"เล่นเน็ต",
+               "use":"3 GB",
+               "time":"30",
+               "unit":"วัน",
+               "price":"99",
+               "remark":"*",
+               "link":"http://m.ais.co.th/j7HgrDSo"
+            }
+         ]
+      },
+      {
+         "id":2,
+         "category":"เหมา เหมา! เน็ตแรงเต็มสปีด 4G/3G",
+         "type":"both",
+         "subcategory":[
+            {
+               "id":1,
+               "name":"เล่นเน็ตเต็มสปีต 1 วัน",
+               "day":[
+                  {
+                     "id":1,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*70#",
+                     "detail":"100 MB ใช้งานได้ 1 วัน",
+                     "head":"เหมา เหมา 4G/3G",
+                     "use":"100 MB",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"9",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/1WH84bSO"
+                  },
+                  {
+                     "id":2,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*71#",
+                     "detail":"200 MB ใช้งานได้ 1 วัน",
+                     "head":"เหมา เหมา 4G/3G",
+                     "use":"200 MB",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"15",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/J1Hd1mFx"
+                  },
+                  {
+                     "id":3,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7026#",
+                     "detail":"500 MB ใช้งานได้ 1 วัน",
+                     "head":"เหมา เหมา 4G/3G",
+                     "use":"500 MB",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"19",
+                     "remark":"bestseller",
+                     "link":"http://m.ais.co.th/RbH6xvSE"
+                  },
+                  {
+                     "id":4,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7027#",
+                     "detail":"1.5 GB ใช้งานได้ 1 วัน",
+                     "head":"เหมา เหมา 4G/3G",
+                     "use":"1.5 GB",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"39",
+                     "remark":"*",
+                     "link":"http://m.ais.co.th/pLHWpmuZ"
+                  },
+                  {
+                     "id":5,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7028#",
+                     "detail":"3 GB ใช้งานได้ 1 วัน",
+                     "head":"เหมา เหมา 4G/3G",
+                     "use":"3 GB",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"49",
+                     "remark":"recomment",
+                     "link":"http://m.ais.co.th/yGHK6EtE"
+                  },
+                  {
+                     "id":6,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7031#",
+                     "detail":"อินเทอร์เน็ต 1 GB 1 วัน 35 บาท",
+                     "head":"เหมา เหมา 4G/3G",
+                     "use":"1 GB",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"35",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/4RHw74c8"
+                  },
+                  {
+                     "id":7,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7032#",
+                     "detail":"อินเทอร์เน็ต 2 GB 1 วัน 45 บาท",
+                     "head":"เหมา เหมา 4G/3G",
+                     "use":"2 GB",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"45",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/1WHxAyhO"
+                  },
+                  {
+                     "id":8,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7033#",
+                     "detail":"อินเทอร์เน็ต 4 GB 1 วัน 69 บาท",
+                     "head":"เหมา เหมา 4G/3G",
+                     "use":"4 GB",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"69",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/rxH083uJ"
+                  },
+                  {
+                     "id":9,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7034#",
+                     "detail":"อินเทอร์เน็ต 5 GB 1 วัน 75 บาท",
+                     "head":"เหมา เหมา 4G/3G",
+                     "use":"5 GB",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"75",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/mlHayQfo"
+                  }
+               ],
+               "month":[
+
+               ]
+            },
+            {
+               "id":2,
+               "name":"เล่นเน็ตเต็มสปีต 3 วัน",
+               "day":[
+                  {
+                     "id":1,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7035#",
+                     "detail":"อินเทอร์เน็ต 1 GB 3 วัน 65 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"1 GB",
+                     "time":"3",
+                     "unit":"วัน",
+                     "price":"65",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/oZH0VjU4"
+                  },
+                  {
+                     "id":2,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7036#",
+                     "detail":"อินเทอร์เน็ต 1.5 GB 3 วัน 69 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"1.5 GB",
+                     "time":"3",
+                     "unit":"วัน",
+                     "price":"69",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/VYHYB7H9"
+                  },
+                  {
+                     "id":3,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7037#",
+                     "detail":"อินเทอร์เน็ต 2 GB  3 วัน  75 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"2 GB",
+                     "time":"3",
+                     "unit":"วัน",
+                     "price":"75",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/0WHPGEC8"
+                  },
+                  {
+                     "id":4,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7038#",
+                     "detail":"อินเทอร์เน็ต 3 GB 3 วัน 79 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"3 GB",
+                     "time":"3",
+                     "unit":"วัน",
+                     "price":"79",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/0WHPGEC8"
+                  },
+                  {
+                     "id":5,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7039#",
+                     "detail":"อินเทอร์เน็ต 4 GB 3 วัน 99 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"4 GB",
+                     "time":"3",
+                     "unit":"วัน",
+                     "price":"99",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/vBHbYwUQ"
+                  },
+                  {
+                     "id":6,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7040#",
+                     "detail":"อินเทอร์เน็ต 5 GB 3 วัน 105 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"5 GB",
+                     "time":"3",
+                     "unit":"วัน",
+                     "price":"105",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/2WHR2yUQ"
+                  }
+               ],
+               "month":[
+
+               ]
+            },
+            {
+               "id":3,
+               "name":"เล่นเน็ตเต็มสปีด 5 วัน",
+               "day":[
+                  {
+                     "id":1,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7029#",
+                     "detail":"2 GB ใช้งานได้ 5 วัน ",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"2 GB",
+                     "time":"5",
+                     "unit":"วัน",
+                     "price":"99",
+                     "remark":"*",
+                     "link":"http://m.ais.co.th/4RHm01i8"
+                  },
+                  {
+                     "id":2,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7041#",
+                     "detail":"อินเทอร์เน็ต 1 GB 5 วัน 90 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"1 GB",
+                     "time":"5",
+                     "unit":"วัน",
+                     "price":"90",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/j7HzObSo"
+                  },
+                  {
+                     "id":3,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7042#",
+                     "detail":"อินเทอร์เน็ต 1.5 GB 5 วัน 95 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"1.5 GB",
+                     "time":"5",
+                     "unit":"วัน",
+                     "price":"95",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/bnHRD3HV"
+                  },
+                  {
+                     "id":4,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7043#",
+                     "detail":"อินเทอร์เน็ต 3 GB 5 วัน 105 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"3 GB",
+                     "time":"5",
+                     "unit":"วัน",
+                     "price":"105",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/xxHlAPf2"
+                  },
+                  {
+                     "id":5,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7044#",
+                     "detail":"อินเทอร์เน็ต 4 GB 5 วัน 119 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"4 GB",
+                     "time":"5",
+                     "unit":"วัน",
+                     "price":"119",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/1WHxM2hO"
+                  },
+                  {
+                     "id":6,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7045#",
+                     "detail":"อินเทอร์เน็ต 5 GB 5 วัน 125 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"5 GB",
+                     "time":"5",
+                     "unit":"วัน",
+                     "price":"125",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/DeHn4AH8"
+                  }
+               ],
+               "month":[
+
+               ]
+            },
+            {
+               "id":4,
+               "name":"เล่นเน็ตเต็มสปีด 7 วัน",
+               "day":[
+                  {
+                     "id":1,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*73#",
+                     "detail":"400 MB ใช้งานได้ 7 วัน",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"400 MB",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"59",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/KYHqPWcx"
+                  },
+                  {
+                     "id":2,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*745#",
+                     "detail":"600 MB ใช้งานได้ 7 วัน",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"600 MB",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"79",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/PYHzJMUo"
+                  },
+                  {
+                     "id":3,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*775#",
+                     "detail":"อินเทอร์เน็ต 49 บาท 2 GB 7 วัน",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"2 GB",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"49",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/1WHwEnUO"
+                  },
+                  {
+                     "id":4,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7069#",
+                     "detail":"อินเทอร์เน็ต 5 GB 99 บาท 7 วัน",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"5 GB",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"99",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/0WHMZ3H8"
+                  },
+                  {
+                     "id":5,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*746#",
+                     "detail":"1 GB ใช้งานได้ 7 วัน",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"1 GB",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"99",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/MYHo9JCd"
+                  },
+                  {
+                     "id":6,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7046#",
+                     "detail":"อินเทอร์เน็ต 1.5 GB 7 วัน 109 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"1.5 GB",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"109",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/oZH0Drt4"
+                  },
+                  {
+                     "id":7,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7047#",
+                     "detail":"อินเทอร์เน็ต 2 GB 7 วัน 115 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"2 GB",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"115",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/ZyH4wjt6"
+                  },
+                  {
+                     "id":8,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7048#",
+                     "detail":"อินเทอร์เน็ต 3 GB 7 วัน 119 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"3 GB",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"119",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/3bHJLji8"
+                  },
+                  {
+                     "id":9,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7049#",
+                     "detail":"อินเทอร์เน็ต 4 GB 7 วัน 135 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"4 GB",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"135",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/wxH07yi1"
+                  },
+                  {
+                     "id":10,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7050#",
+                     "detail":"อินเทอร์เน็ต 5 GB 7 วัน 150 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"5 GB",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"150",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/DeHnB3s8"
+                  }
+               ],
+               "month":[
+
+               ]
+            },
+            {
+               "id":5,
+               "name":"เล่นเน็ตเต็มสปีด 10 วัน",
+               "day":[
+                  {
+                     "id":1,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7030#",
+                     "detail":"4 GB ใช้งานได้ 10 วัน",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"4 GB",
+                     "time":"10",
+                     "unit":"วัน",
+                     "price":"150",
+                     "remark":"*",
+                     "link":"http://m.ais.co.th/rxHr97FJ"
+                  },
+                  {
+                     "id":2,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7051#",
+                     "detail":"อินเทอร์เน็ต 1 GB 10 วัน 125 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"1 GB",
+                     "time":"10",
+                     "unit":"วัน",
+                     "price":"125",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/oZH0gxh4"
+                  },
+                  {
+                     "id":3,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7052#",
+                     "detail":"อินเทอร์เน็ต 1.5 GB 10 วัน 135 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"1.5 GB",
+                     "time":"10",
+                     "unit":"วัน",
+                     "price":"135",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/ZyH4LrS6"
+                  },
+                  {
+                     "id":4,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7053#",
+                     "detail":"อินเทอร์เน็ต 2 GB 10 วัน 139 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"2 GB",
+                     "time":"10",
+                     "unit":"วัน",
+                     "price":"139",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/yGHeeLfE"
+                  },
+                  {
+                     "id":5,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7054#",
+                     "detail":"อินเทอร์เน็ต 3 GB 10 วัน 145 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"3 GB",
+                     "time":"10",
+                     "unit":"วัน",
+                     "price":"145",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/7LHyyjT8"
+                  },
+                  {
+                     "id":6,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7055#",
+                     "detail":"อินเทอร์เน็ต 5 GB 10 วัน 175 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"5 GB",
+                     "time":"10",
+                     "unit":"วัน",
+                     "price":"175",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/PYHPznFo"
+                  }
+               ],
+               "month":[
+
+               ]
+            },
+            {
+               "id":6,
+               "name":"เล่นเน็ตเต็มสปีด 15 วัน",
+               "day":[
+			   		{
+                     "id":1,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"",
+                     "detail":"อินเทอร์เน็ต 1 GB 15 วัน 99 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"1 GB",
+                     "time":"15",
+                     "unit":"วัน",
+                     "price":"99",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/loHQzxUB"
+                  },
+                  {
+                     "id":2,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7056#",
+                     "detail":"อินเทอร์เน็ต 1 GB 15 วัน 179 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"1 GB",
+                     "time":"15",
+                     "unit":"วัน",
+                     "price":"179",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/J1HywLcx"
+                  },
+                  {
+                     "id":3,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7057#",
+                     "detail":"อินเทอร์เน็ต 1.5 GB 15 วัน 189 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"1.5 GB",
+                     "time":"15",
+                     "unit":"วัน",
+                     "price":"189",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/epHBAbfY"
+                  },
+                  {
+                     "id":4,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7058#",
+                     "detail":"อินเทอร์เน็ต 2 GB 15 วัน 195 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"2 GB",
+                     "time":"15",
+                     "unit":"วัน",
+                     "price":"195",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/3bHJ7Ai8"
+                  },
+                  {
+                     "id":5,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7059#",
+                     "detail":"อินเทอร์เน็ต 3 GB 15 วัน 200 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"3 GB",
+                     "time":"15",
+                     "unit":"วัน",
+                     "price":"200",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/wxH0e7F1"
+                  },
+                  {
+                     "id":6,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7060#",
+                     "detail":"อินเทอร์เน็ต 4 GB 15 วัน 250 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"4 GB",
+                     "time":"15",
+                     "unit":"วัน",
+                     "price":"250",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/EKHxygUy"
+                  },
+                  {
+                     "id":7,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7061#",
+                     "detail":"อินเทอร์เน็ต 5 GB 15 วัน 300 บาท",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"5 GB",
+                     "time":"15",
+                     "unit":"วัน",
+                     "price":"300",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/2WHYnzCQ"
+                  }
+               ],
+               "month":[
+
+               ]
+            },
+            {
+               "id":7,
+               "name":"เล่นเน็ตเต็มสปีด 30 วัน",
+               "day":[
+
+               ],
+               "month":[
+                  {
+                     "id":1,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*75#",
+                     "detail":"2 GB ใช้งานได้ 30 วัน",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"2 GB",
+                     "time":"30",
+                     "unit":"วัน",
+                     "price":"239",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/yGHBqlCE"
+                  },
+                  {
+                     "id":2,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7062#",
+                     "detail":"อินเทอร์เน็ต 1 GB 30 วัน 199 บาท/เดือน",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"1 GB",
+                     "time":"30",
+                     "unit":"วัน",
+                     "price":"199",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/j7HyeOSo"
+                  },
+                  {
+                     "id":3,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7063#",
+                     "detail":"อินเทอร์เน็ต 1.5 GB 30 วัน 229 บาท/เดือน",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"1.5 GB",
+                     "time":"30",
+                     "unit":"วัน",
+                     "price":"229",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/6yHlP6I8"
+                  },
+                  {
+                     "id":4,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7064#",
+                     "detail":"อินเทอร์เน็ต 2 GB  30 วัน  239 บาท/เดือน",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"2 GB",
+                     "time":"30",
+                     "unit":"วัน",
+                     "price":"239",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/xxHb0Lh2"
+                  },
+                  {
+                     "id":5,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7065#",
+                     "detail":"อินเทอร์เน็ต 3 GB 30 วัน 399 บาท/เดือน",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"3 GB",
+                     "time":"30",
+                     "unit":"วัน",
+                     "price":"399",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/loHRGaSบาท"
+                  },
+                  {
+                     "id":6,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*7066#",
+                     "detail":"อินเทอร์เน็ต 4 GB 30 วัน 450 บาท/เดือน",
+                     "head":"เน็ตเต็มสปีต",
+                     "use":"4 GB",
+                     "time":"30",
+                     "unit":"วัน",
+                     "price":"450",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/BBHKEMT8"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "id":3,
+         "category":"เหมา เหมา! เน็ตเล่นต่อเนื่องได้ไม่อั้น",
+         "type":"both",
+         "subcategory":[
+            {
+               "id":1,
+               "name":"เล่นเน็ตไม่อั้น ที่ความเร็วสูงสุด 384Kbps",
+               "day":[
+                  {
+                     "id":1,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*738#",
+                     "detail":"200 MB ใช้งานได้ 1 วัน ",
+                     "head":"เหมา เหมา เน็ตไม่อั้น",
+                     "use":"200 MB",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"14",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/ApHEr4H8"
+                  },
+                  {
+                     "id":2,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*731#",
+                     "detail":"1 GB  ใช้งานได้ 7 วัน",
+                     "head":"เหมา เหมา เน็ตไม่อั้น",
+                     "use":"1 GB",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"69",
+                     "remark":"*",
+                     "link":"http://m.ais.co.th/bnHdz2FV"
+                  }
+               ],
+               "month":[
+
+               ]
+            },
+            {
+               "id":2,
+               "name":"เล่นเน็ตไม่อั้น ที่ความเร็วสูงสุด 512Kbps",
+               "day":[
+                  {
+                     "id":1,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*210#",
+                     "detail":"300 MB ใช้งานได้ 1 วัน",
+                     "head":"เหมา เหมา เน็ตไม่อั้น",
+                     "use":"300 MB",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"15",
+                     "remark":"bestseller",
+                     "link":"http://m.ais.co.th/xxHbRzc2"
+                  },
+                  {
+                     "id":2,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*740#",
+                     "detail":"1.5  GB  ใช้งานได้ 7 วัน",
+                     "head":"เหมา เหมา เน็ตไม่อั้น",
+                     "use":"1.5 GB",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"79",
+                     "remark":"recomment",
+                     "link":"http://m.ais.co.th/MYHoO3Cd"
+                  },
+                  {
+                     "id":3,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"",
+                     "detail":"Package Multisim แบบ Unlimit ไม่จำกัดปริมาณ ใช้งานได้ 7 วัน 89 บาท",
+                     "head":"",
+                     "use":"ไม่จำกัดปริมาณ",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"89",
+                     "remark":"unlimit",
+                     "link":"http://m.ais.co.th/yGHOlVUE"
+                  }
+               ],
+               "month":[
+
+               ]
+            },
+            {
+               "id":3,
+               "name":"เล่นเน็ตไม่อั้น ที่ความเร็วสูงสุด 1Mbps",
+               "day":[
+                  {
+                     "id":1,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*760#",
+                     "detail":"1 GB ใช้งานได้ 1 วัน",
+                     "head":"เหมา เหมา เน็ตไม่อั้น",
+                     "use":"1 GB",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"50",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/aWHD96SM"
+                  },
+                  {
+                     "id":2,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*761#",
+                     "detail":"2 GB ใช้งานได้ 1 วัน",
+                     "head":"เหมา เหมา เน็ตไม่อั้น",
+                     "use":"2 GB",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"55",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/n1HABJTq"
+                  }
+               ],
+               "month":[
+
+               ]
+            },
+            {
+               "id":4,
+               "name":"เล่นเน็ตไม่อั้น ที่ความเร็วสูงสุด เต็มสปีด!",
+               "day":[
+                  {
+                     "id":1,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*1#",
+                     "detail":"320 MB ใช้งานได้ 1 วัน",
+                     "head":"เหมา เหมา เน็ตไม่อั้น",
+                     "use":"320 MB",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"49",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/aWHDyyIM"
+                  },
+                  {
+                     "id":2,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*74#",
+                     "detail":"2 GB  ใช้งานได้ 7 วัน",
+                     "head":"เหมา เหมา เน็ตไม่อั้น",
+                     "use":"2 GB",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"249",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/YyH39zIE"
+                  }
+               ],
+               "month":[
+                  {
+                     "id":1,
+                     "promotion":"prepaid/postpaid",
+                     "ussd":"*777*76#",
+                     "detail":"8 GB  ใช้งานได้ 30 วัน",
+                     "head":"เหมา เหมา เน็ตไม่อั้น",
+                     "use":"8 GB",
+                     "time":"30",
+                     "unit":"วัน",
+                     "price":"799",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/OzH00oim"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "id":4,
+         "category":"ขาโซเชียล! แชทแชร์เม้นไลค์กันรัวๆ",
+         "type":"day",
+         "subcategory":[
+            {
+               "id":1,
+               "name":"Social ได้ไม่อั้น 1 วัน",
+               "day":[
+                  {
+                     "id":1,
+                     "promotion":"prepaid",
+                     "ussd":"*777*9#",
+                     "detail":"Facebook ใช้งานได้ 1 วัน",
+                     "head":"Social ไม่อั้น",
+                     "use":"Facebook",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"5",
+                     "remark":"*",
+                     "link":"http://m.ais.co.th/2WHY79tQ"
+                  },
+                  {
+                     "id":2,
+                     "promotion":"prepaid",
+                     "ussd":"*777*96#",
+                     "detail":"LINE ใช้งานได้ 1 วัน",
+                     "head":"Social ไม่อั้น",
+                     "use":"LINE",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"5",
+                     "remark":"*",
+                     "link":"http://m.ais.co.th/KYHqQKUx"
+                  },
+                  {
+                     "id":3,
+                     "promotion":"prepaid",
+                     "ussd":"*777*92#",
+                     "detail":"Whatapp ใช้งานได้ 1 วัน",
+                     "head":"Social ไม่อั้น",
+                     "use":"Whatapp",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"5",
+                     "remark":"",
+                     "link":"javascript:void(0)"
+                  },
+                  {
+                     "id":4,
+                     "promotion":"prepaid",
+                     "ussd":"*777*914#",
+                     "detail":"Youtube ใช้งานได้ 1 วัน",
+                     "head":"Social ไม่อั้น",
+                     "use":"Youtube",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"29",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/WxHj9ehบาท"
+                  },
+                  {
+                     "id":5,
+                     "promotion":"prepaid",
+                     "ussd":"*777*701#",
+                     "detail":"FB LINE Whatsapp ใช้งานได้ 1 วัน",
+                     "head":"Social ไม่อั้น",
+                     "use":"FB LINE Whatsapp",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"7",
+                     "remark":"combination",
+                     "link":"http://m.ais.co.th/wxHn03H1"
+                  },
+                  {
+                     "id":6,
+                     "promotion":"prepaid",
+                     "ussd":"*777*766#",
+                     "detail":"FB LINE Whatsapp U/L แถมเน็ต 384kbps 300 MB 3 social apps ไม่อั้น ใช้งานได้ 1 วัน",
+                     "head":"Social ไม่อั้น",
+                     "use":"300 MB",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"17",
+                     "remark":"combination",
+                     "link":"http://m.ais.co.th/OzH00oim"
+                  },
+                  {
+                     "id":7,
+                     "promotion":"prepaid",
+                     "ussd":"*357#",
+                     "detail":"แพ๊คเกจ Superplay 1 วัน 29 บาท ใช้เน็ตผ่าน Application AIS PLAY, YouTube, JOOX, AtimeOnline, COOLISM และ SeedMCOT ได้ไม่จำกัด ที่ความเร็วสูงสุด 512 Kbps",
+                     "head":"Superplay",
+                     "use":"512 Kbps",
+                     "time":"1",
+                     "unit":"วัน",
+                     "price":"29",
+                     "remark":"superplay",
+                     "link":"http://m.ais.co.th/vBHo7eFQ"
+                  }
+               ],
+               "month":[
+
+               ]
+            },
+            {
+               "id":2,
+               "name":"Social ได้ไม่อั้น 7 วัน",
+               "day":[
+                  {
+                     "id":1,
+                     "promotion":"prepaid",
+                     "ussd":"*777*91#",
+                     "detail":"Facebook ใช้งานได้ 7 วัน",
+                     "head":"Social ไม่อั้น",
+                     "use":"Facebook",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"29",
+                     "remark":"*",
+                     "link":"http://m.ais.co.th/xxHbLKu2"
+                  },
+                  {
+                     "id":2,
+                     "promotion":"prepaid",
+                     "ussd":"*777*97#",
+                     "detail":"LINE ใช้งานได้ 7 วัน",
+                     "head":"Social ไม่อั้น",
+                     "use":"LINE",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"19",
+                     "remark":"*",
+                     "link":"http://m.ais.co.th/BBHKDBU8"
+                  },
+                  {
+                     "id":3,
+                     "promotion":"prepaid",
+                     "ussd":"*777*93#",
+                     "detail":"Whatapp ใช้งานได้ 7 วัน",
+                     "head":"Social ไม่อั้น",
+                     "use":"Whatapp",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"19",
+                     "remark":"",
+                     "link":"javascript:void(0)"
+                  },
+                  {
+                     "id":4,
+                     "promotion":"prepaid",
+                     "ussd":"*777*915#",
+                     "detail":"Youtube ใช้งานได้ 7 วัน",
+                     "head":"Social ไม่อั้น",
+                     "use":"Youtube",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"99",
+                     "remark":"",
+                     "link":"http://m.ais.co.th/J1HdRYtx"
+                  },
+                  {
+                     "id":5,
+                     "promotion":"prepaid",
+                     "ussd":"*777*791#",
+                     "detail":"FB LINE Whatsapp ใช้งานได้ 7 วัน",
+                     "head":"Social ไม่อั้น",
+                     "use":"FB LINE Whatsapp",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"49",
+                     "remark":"combination",
+                     "link":"http://m.ais.co.th/BBHKx0F8"
+                  },
+                  {
+                     "id":6,
+                     "promotion":"prepaid",
+                     "ussd":"*777*7013#",
+                     "detail":"FB LINE Whatsapp Full speed 100 MB & 3 social apps ไม่อั้น ใช้งานได้ 7 วัน",
+                     "head":"Social ไม่อั้น",
+                     "use":"100 MB",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"59",
+                     "remark":"combination",
+                     "link":"http://m.ais.co.th/d6HJ1aTq"
+                  },
+                  {
+                     "id":7,
+                     "promotion":"prepaid",
+                     "ussd":"*357#",
+                     "detail":"แพ๊คเกจ Superplay 7 วัน 99 บาท ใช้เน็ตผ่าน Application AIS PLAY, YouTube, JOOX, AtimeOnline, COOLISM และ SeedMCOT ได้ไม่จำกัด ที่ความเร็วสูงสุด 512 Kbps",
+                     "head":"Superplay",
+                     "use":"512 Kbps",
+                     "time":"7",
+                     "unit":"วัน",
+                     "price":"99",
+                     "remark":"superplay",
+                     "link":"http://m.ais.co.th/1WHr3MFO"
+                  }
+               ],
+               "month":[
+
+               ]
+            }
+         ]
+      },
+      {
+         "id":5,
+         "category":"แพ็กสุดพิเศษ! สำหรับลูกค้าที่มีแพ็กเน็ตแบบใช้งานต่อเนื่อง",
+         "type":"day",
+         "day":[
+		 	{
+               "id":1,
+               "promotion":"prepaid/postpaid",
+               "ussd":"",
+               "detail":"อินเทอร์เน็ต 39 บาท 1 GB 7 วัน",
+               "head":"ใช้งานต่อเนื่อง",
+               "use":"1 GB",
+               "time":"7",
+               "unit":"วัน",
+               "price":"39",
+               "remark":"*",
+               "link":"http://m.ais.co.th/bnHKd1tV"
+            },
+            {
+               "id":2,
+               "promotion":"prepaid/postpaid",
+               "ussd":"*777*775#",
+               "detail":"อินเทอร์เน็ต 49 บาท 2 GB 7 วัน",
+               "head":"ใช้งานต่อเนื่อง",
+               "use":"2 GB",
+               "time":"7",
+               "unit":"วัน",
+               "price":"49",
+               "remark":"*",
+               "link":"http://m.ais.co.th/1WHwEnUO"
+            },
+            {
+               "id":3,
+               "promotion":"prepaid/postpaid",
+               "ussd":"",
+               "detail":"อินเทอร์เน็ต 79 บาท 3 GB 7 วัน",
+               "head":"ใช้งานต่อเนื่อง",
+               "use":"3 GB",
+               "time":"7",
+               "unit":"วัน",
+               "price":"79",
+               "remark":"*",
+               "link":"javascript:void(0);"
+            },
+            {
+               "id":4,
+               "promotion":"prepaid/postpaid",
+               "ussd":"",
+               "detail":"อินเทอร์เน็ต 89 บาท 4 GB 7 วัน",
+               "head":"ใช้งานต่อเนื่อง",
+               "use":"4 GB",
+               "time":"7",
+               "unit":"วัน",
+               "price":"89",
+               "remark":"*",
+               "link":"javascript:void(0);"
+            },
+            {
+               "id":5,
+               "promotion":"prepaid/postpaid",
+               "ussd":"*777*7069#",
+               "detail":"อินเทอร์เน็ต 5 GB 99 บาท 7 วัน",
+               "head":"ใช้งานต่อเนื่อง",
+               "use":"5 GB",
+               "time":"7",
+               "unit":"วัน",
+               "price":"99",
+               "remark":"*",
+               "link":"http://m.ais.co.th/0WHMZ3H8"
+            }
+         ],
+         "month":[
+
+         ]
+      }
+   ]
+}

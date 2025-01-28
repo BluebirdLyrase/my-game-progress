@@ -1,0 +1,62 @@
+﻿{
+    "data":[
+        {
+            "day":[
+                {
+                    "id":4,
+                    "promotion":"prepaid/postpaid",
+                    "ussd":"*777*7038#",
+                    "detail":"เน็ตเต็มสปีด 3 GB ใช้งานได้ 3 วัน 79 บาท",
+                    "head":"เน็ตเต็มสปีด",
+                    "use":"3 GB",
+                    "time":"3",
+                    "unit":"วัน",
+                    "price":"79",
+                    "remark":"bestseller",
+                    "link":"/interactive/ApHZeQ1s8",
+                    "testlink":"/interactive/MYHEmAhd",
+                    "type":"month",
+                    "category_reffer":2,
+                    "subcategory_reffer":2,
+                    "package":1
+                },
+                {
+                    "id":6,
+                    "promotion":"prepaid/postpaid",
+                    "ussd":"*777*7048#",
+                    "detail":"เน็ตเต็มสปีด 3 GB ใช้งานได้ 7 วัน 119 บาท",
+                    "head":"เน็ตเต็มสปีด",
+                    "use":"3 GB",
+                    "time":"7",
+                    "unit":"วัน",
+                    "price":"119",
+                    "remark":"bestseller",
+                    "link":"/interactive/rxHPQbdSJ",
+                    "testlink":"/interactive/3bHeodH8",
+                    "type":"month",
+                    "category_reffer":2,
+                    "subcategory_reffer":4,
+                    "package":1
+                },
+                {
+                    "id":1,
+                    "promotion":"prepaid/postpaid",
+                    "ussd":"*777*7030#",
+                    "detail":"เน็ตเต็มสปีด 4 GB ใช้งานได้ 10 วัน 150 บาท",
+                    "head":"เน็ตเต็มสปีด",
+                    "use":"4 GB",
+                    "time":"10",
+                    "unit":"วัน",
+                    "price":"150",
+                    "remark":"bestseller",
+                    "link":"/interactive/d6HQo0quq",
+                    "testlink":"/interactive/zGHYoLtZ",
+                    "type":"month",
+                    "category_reffer":1,
+                    "subcategory_reffer":1,
+                    "package":1
+                }
+            ]
+        }
+    ]
+}
