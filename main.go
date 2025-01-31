@@ -2,12 +2,12 @@ package main
 
 import (
 	"log"
-	"net/http"
 
 	"github.com/gin-gonic/gin"
 
 	"my-game-progress/database"
-	"my-game-progress/service"
+	game_handler "my-game-progress/handler/game"
+	images_handler "my-game-progress/handler/images"
 )
 
 type Package struct {
@@ -27,45 +27,27 @@ type Package struct {
 }
 
 func main() {
-	// var basedPath string = ""
-	//var basedPath string = "notify"
 	err := database.Init()
 	if err != nil {
 		log.Fatalf("Error initializing database: %v", err)
 		panic(err)
 	}
 	r := gin.New()
-
 	r.LoadHTMLGlob("templates/**/*")
-	api := r.Group("api")
 	r.Static("/static", "./static")
-	r.GET("/", func(c *gin.Context) {
-		games, err := service.GetGameList()
-		if err != nil {
-			log.Fatalf("Failed to get game list: %v", err)
-			c.JSON(http.StatusInternalServerError, gin.H{
-				"error":   "Internal Server Error",
-				"message": err.Error(),
-			})
-		}
-		c.HTML(http.StatusOK, "index.html", gin.H{
-			"games": games,
-		})
-	})
 
-	api.GET("/game", func(c *gin.Context) {
-		games, err := service.GetGameList()
-		if err != nil {
-			log.Fatalf("Failed to get game list: %v", err)
-			c.JSON(http.StatusInternalServerError, gin.H{
-				"error":   "Internal Server Error",
-				"message": err.Error(),
-			})
-		}
-		c.JSON(http.StatusOK, gin.H{
-			"games": games,
-		})
-	})
+	api := r.Group("api")
+	image := api.Group("image")
+	game := api.Group("game")
 
+	r.GET("/", game_handler.GamePage)
+
+	game.GET("list", game_handler.GameList)
+	game.PUT("", game_handler.InsertGame)
+
+	image.PUT("", images_handler.UploadImage)
+	image.GET(":file_id", images_handler.GetImage)
 	r.Run(":" + "4200")
 }
+
+// UploadImage
