@@ -74,3 +74,62 @@ h1 {
     opacity: 1;
     /* Show text on hover */
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    width: 400px;
+    /* Fixed width for the search bar */
+}
+
+input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 12px;
+    font-size: 16px;
+    flex: 1;
+    /* Takes up remaining space */
+    background: transparent;
+    color: #333;
+}
+
+input[type="text"]::placeholder {
+    color: #999;
+}
+
+button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+    margin-left: 10px;
+    /* Space between input and button */
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.7);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+}

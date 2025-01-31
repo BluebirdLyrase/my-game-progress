@@ -35,6 +35,7 @@ func main() {
 	r := gin.New()
 	r.LoadHTMLGlob("templates/**/*")
 	r.Static("/static", "./static")
+	r.StaticFile("/favicon.ico", "./favicon.ico")
 
 	api := r.Group("api")
 	image := api.Group("image")
@@ -47,7 +48,7 @@ func main() {
 
 	image.PUT("", images_handler.UploadImage)
 	image.GET(":file_id", images_handler.GetImage)
-	r.Run(":" + "4200")
+	r.Run(":" + "8080")
 }
 
 // UploadImage

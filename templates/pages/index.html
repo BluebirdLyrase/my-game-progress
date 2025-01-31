@@ -10,12 +10,24 @@
 </head>
 
 <body>
-    <h1>Most Recent</h1>
+    <h1>My Game Progression</h1>
+    <div class="container">
+        <div>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search..." hx-post="/search"
+                    hx-trigger="keyup changed delay:500ms" hx-target="#search-results" name="query" />
+                <button>Search</button>
+            </div>
+            <div id="search-results"></div>
+        </div>
+    </div>
     <div class="gallery">
         {{range .games}}
         <div class="book-cover" style="background-image: url({{.GameImage.Cover }});"><span>{{.Title}}</span></div>
         {{end}}
     </div>
 </body>
+<link rel="stylesheet" href="static/js/jquery-3.6.0.min.js">
+<link rel="stylesheet" href="static/js/htmx.js">
 
 </html>
