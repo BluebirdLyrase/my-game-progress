@@ -4,14 +4,16 @@ import (
 	"fmt"
 
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/mongo/options"
 
 	"my-game-progress/database"
 	"my-game-progress/model/model_game"
 )
 
-func GetGameList() ([]model_game.GameBase, error) {
+func GetGameList(filter bson.M, sort bson.M, limit int64) ([]model_game.GameBase, error) {
 	gameCollection := database.DB.Collection("game")
-	cursor, err := gameCollection.Find(database.Context, bson.M{})
+	opts := options.Find().SetSort(sort).SetLimit(limit)
+	cursor, err := gameCollection.Find(database.Context, filter, opts)
 	if err != nil {
 		return nil, fmt.Errorf("failed to fetch games: %w", err)
 	}

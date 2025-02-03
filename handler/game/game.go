@@ -7,6 +7,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo/gridfs"
 
@@ -18,7 +19,7 @@ import (
 const filePath string = "/api/image/"
 
 func GamePage(c *gin.Context) {
-	games, err := service.GetGameList()
+	games, err := service.GetGameList(bson.M{}, bson.M{"year": -1}, 30)
 	if err != nil {
 		log.Fatalf("Failed to get game list: %v", err)
 		c.JSON(http.StatusInternalServerError, gin.H{
@@ -32,7 +33,10 @@ func GamePage(c *gin.Context) {
 }
 
 func GameList(c *gin.Context) {
-	games, err := service.GetGameList()
+	query := c.Query("query")
+	games, err := service.GetGameList(bson.M{
+		"title": bson.M{"$regex": query, "$options": "i"},
+	}, bson.M{"year": -1}, 0)
 	if err != nil {
 		log.Fatalf("Failed to get game list: %v", err)
 		c.JSON(http.StatusInternalServerError, gin.H{
@@ -40,7 +44,10 @@ func GameList(c *gin.Context) {
 			"message": err.Error(),
 		})
 	}
-	c.JSON(http.StatusOK, gin.H{
+	// c.JSON(http.StatusOK, gin.H{
+	// 	"games": games,
+	// })
+	c.HTML(http.StatusOK, "game-gallery.html", gin.H{
 		"games": games,
 	})
 }
