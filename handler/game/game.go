@@ -2,6 +2,7 @@ package game_handler
 
 import (
 	"encoding/json"
+	"fmt"
 	"io"
 	"log"
 	"net/http"
@@ -33,9 +34,9 @@ func GamePage(c *gin.Context) {
 }
 
 func GameList(c *gin.Context) {
-	query := c.Query("query")
+	title := c.Query("title")
 	games, err := service.GetGameList(bson.M{
-		"title": bson.M{"$regex": query, "$options": "i"},
+		"title": bson.M{"$regex": title, "$options": "i"},
 	}, bson.M{"year": -1}, 0)
 	if err != nil {
 		log.Fatalf("Failed to get game list: %v", err)
@@ -52,7 +53,7 @@ func GameList(c *gin.Context) {
 	})
 }
 
-func InsertGame(c *gin.Context) {
+func Insert(c *gin.Context) {
 
 	file, header, err := c.Request.FormFile("image")
 	defer file.Close()
@@ -104,7 +105,7 @@ func InsertGame(c *gin.Context) {
 	c.JSON(200, gin.H{"message": "Inserted record successfully"})
 }
 
-func InsertMultipleGame(c *gin.Context) {
+func InsertMultiple(c *gin.Context) {
 	var jsonData []model_game.Game
 	if err := c.ShouldBindJSON(&jsonData); err != nil {
 		c.JSON(400, gin.H{"error": "Invalid JSON data"})
@@ -126,4 +127,62 @@ func InsertMultipleGame(c *gin.Context) {
 	}
 
 	c.JSON(200, gin.H{"message": "Inserted records successfully"})
+}
+
+func UploadImage(c *gin.Context) {
+
+	file, header, err := c.Request.FormFile("image")
+	defer file.Close()
+	gameID := c.Request.FormValue("game_id")
+
+	if err != nil {
+		c.JSON(400, gin.H{"error": "Failed to get file"})
+		return
+	}
+
+	filename := header.Filename
+
+	bucket, err := gridfs.NewBucket(database.DB)
+	if err != nil {
+		c.JSON(500, gin.H{"error": "Failed to create GridFS bucket"})
+		return
+	}
+
+	uploadStream, err := bucket.OpenUploadStream(filename)
+	if err != nil {
+		c.JSON(500, gin.H{"error": "Failed to open upload stream"})
+		return
+	}
+	defer uploadStream.Close()
+
+	_, err = io.Copy(uploadStream, file)
+	if err != nil {
+		c.JSON(500, gin.H{"error": "Failed to upload image"})
+		return
+	}
+	fileID := uploadStream.FileID.(primitive.ObjectID)
+
+	collection := database.DB.Collection("game")
+	id, err := primitive.ObjectIDFromHex(gameID)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	filter := bson.M{"_id": id}
+	update := bson.M{
+		"$set": bson.M{
+			"gameImage.cover": filePath + fileID.Hex(), // New cover image URL
+		},
+	}
+
+	// Perform the update
+	result, err := collection.UpdateOne(database.Context, filter, update)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Return the response
+	fmt.Printf("ModifiedCount: %+v\n", result.ModifiedCount)
+
+	c.JSON(200, gin.H{"message": "Inserted record successfully"}) //TODO change it to html imagen
 }

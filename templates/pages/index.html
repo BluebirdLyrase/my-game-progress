@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/game.css">
     <link rel="stylesheet" href="static/css/style.css">
-    <script src="static/js/jquery-3.6.0.min.js"></script>
     <script src="static/js/htmx.js"></script>
     <title>My Gaming Progress</title>
 </head>
@@ -17,7 +16,7 @@
         <div>
             <div class="search-container">
                 <input type="text" id="search-input" placeholder="Search..." hx-get="/api/game/list"
-                    hx-trigger="keyup changed delay:500ms" hx-target="#gallery" name="query" />
+                    hx-trigger="keyup changed delay:500ms" hx-target="#gallery" name="title" />
                 <!-- <button>Search</button> -->
             </div>
             <!-- <div id="search-results"></div> -->
