@@ -96,3 +96,27 @@ func InsertGame(c *gin.Context) {
 
 	c.JSON(200, gin.H{"message": "Inserted record successfully"})
 }
+
+func InsertMultipleGame(c *gin.Context) {
+	var jsonData []model_game.Game
+	if err := c.ShouldBindJSON(&jsonData); err != nil {
+		c.JSON(400, gin.H{"error": "Invalid JSON data"})
+		return
+	}
+
+	collection := database.DB.Collection("game")
+
+	var documents []interface{}
+	for _, game := range jsonData {
+		documents = append(documents, game)
+	}
+
+	_, err := collection.InsertMany(database.Context, documents)
+	if err != nil {
+		log.Println("Error inserting documents:", err)
+		c.JSON(500, gin.H{"error": "Failed to insert records"})
+		return
+	}
+
+	c.JSON(200, gin.H{"message": "Inserted records successfully"})
+}

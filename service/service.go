@@ -2,7 +2,6 @@ package service
 
 import (
 	"fmt"
-	"log"
 
 	"go.mongodb.org/mongo-driver/bson"
 
@@ -10,27 +9,18 @@ import (
 	"my-game-progress/model/model_game"
 )
 
-func GetGameList() ([]model_game.Game, error) {
+func GetGameList() ([]model_game.GameBase, error) {
 	gameCollection := database.DB.Collection("game")
-	data, err := database.Fetch(gameCollection)
+	cursor, err := gameCollection.Find(database.Context, bson.M{})
 	if err != nil {
-		log.Fatalf("Failed to fetch games: %v", err)
+		return nil, fmt.Errorf("failed to fetch games: %w", err)
+	}
+	defer cursor.Close(database.Context)
+
+	var games []model_game.GameBase
+	if err := cursor.All(database.Context, &games); err != nil {
+		return nil, fmt.Errorf("failed to decode games: %w", err)
 	}
 
-	var games []model_game.Game
-	for _, item := range data {
-		var game model_game.Game
-		// Decode bson.M into Game struct
-		bsonBytes, err := bson.Marshal(item) // Convert bson.M to BSON bytes
-		if err != nil {
-			return nil, fmt.Errorf("failed to marshal bson.M: %w", err)
-		}
-
-		if err := bson.Unmarshal(bsonBytes, &game); err != nil {
-			return nil, fmt.Errorf("failed to unmarshal to Game struct: %w", err)
-		}
-		games = append(games, game)
-	}
 	return games, nil
-
 }

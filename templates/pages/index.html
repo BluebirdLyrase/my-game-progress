@@ -23,7 +23,11 @@
     </div>
     <div class="gallery">
         {{range .games}}
-        <div class="book-cover" style="background-image: url({{.GameImage.Cover }});"><span>{{.Title}}</span></div>
+        {{if .GameImage.Cover}}
+        <div class="book-cover" style="background-image: url({{.GameImage.Cover}});"><span>{{.Title}}</span></div>
+        {{else}}
+        <div class="book-cover no-cover"><span>{{.Title}}</span></div>
+        {{end}}
         {{end}}
     </div>
 </body>

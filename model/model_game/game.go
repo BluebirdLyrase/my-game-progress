@@ -1,15 +1,22 @@
 package model_game
 
 import (
+	"go.mongodb.org/mongo-driver/bson/primitive"
+
 	"my-game-progress/model/environment"
 )
 
+type GameBase struct {
+	ID        primitive.ObjectID `json:"_id" bson:"_id"`
+	Title     string             `json:"title"`
+	GameImage GameImage          `json:"gameImage"`
+}
+
 type Game struct {
-	Year      int       `json:"year"`
-	Title     string    `json:"title"`
-	Genre     string    `json:"genre"`
-	Remark    string    `json:"remark"`
-	GameImage GameImage `json:"gameImage"`
+	GameBase
+	Year   int    `json:"year"`
+	Genre  string `json:"genre"`
+	Remark string `json:"remark"`
 }
 
 type GameImage struct {

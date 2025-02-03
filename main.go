@@ -44,9 +44,10 @@ func main() {
 	r.GET("/", game_handler.GamePage)
 
 	game.GET("list", game_handler.GameList)
-	game.PUT("", game_handler.InsertGame)
+	game.POST("", game_handler.InsertGame)
+	game.POST("multiple", game_handler.InsertMultipleGame)
 
-	image.PUT("", images_handler.UploadImage)
+	image.POST("", images_handler.UploadImage)
 	image.GET(":file_id", images_handler.GetImage)
 	r.Run(":" + "8080")
 }
