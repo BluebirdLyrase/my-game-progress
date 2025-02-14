@@ -41,14 +41,15 @@ func main() {
 	image := api.Group("image")
 	game := api.Group("game")
 
-	r.GET("/", game_handler.GamePage)
+	r.GET("/", game_handler.IndexPage)
+	r.GET("/my-progress-list", game_handler.GamePage)
 	r.GET("/update-game", game_handler.EditPage)
 
 	game.GET("list", game_handler.GameList)
 	game.GET("list-detail", game_handler.GameListDetail)
 	game.POST("", game_handler.Insert)
 	game.POST("multiple", game_handler.InsertMultiple)
-	game.PUT("images", game_handler.UpdateGame)
+	game.PUT("", game_handler.UpdateGame)
 
 	image.POST("", images_handler.UploadImage)
 	image.GET(":file_id", images_handler.GetImage)

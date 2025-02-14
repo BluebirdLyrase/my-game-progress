@@ -19,6 +19,7 @@ type Game struct {
 	Year      int                `json:"year"`
 	Genre     string             `json:"genre"`
 	Remark    string             `json:"remark"`
+	Slug      string             `json:"slug"`
 }
 
 type GameImage struct {

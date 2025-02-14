@@ -28,6 +28,7 @@ func GetGameList(filter bson.M, sort bson.M, limit int64) ([]model_game.GameBase
 }
 
 func GetGameFullDetail(filter bson.M, sort bson.M, limit int64) ([]model_game.Game, error) {
+	var games []model_game.Game
 	gameCollection := database.DB.Collection("game")
 	opts := options.Find().SetSort(sort).SetLimit(limit)
 	cursor, err := gameCollection.Find(database.Context, filter, opts)
@@ -36,7 +37,6 @@ func GetGameFullDetail(filter bson.M, sort bson.M, limit int64) ([]model_game.Ga
 	}
 	defer cursor.Close(database.Context)
 
-	var games []model_game.Game
 	if err := cursor.All(database.Context, &games); err != nil {
 		return nil, fmt.Errorf("failed to decode games: %w", err)
 	}
