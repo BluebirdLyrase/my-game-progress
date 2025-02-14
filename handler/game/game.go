@@ -33,6 +33,20 @@ func GamePage(c *gin.Context) {
 	})
 }
 
+func EditPage(c *gin.Context) {
+	games, err := service.GetGameFullDetail(bson.M{}, bson.M{"year": -1}, 30)
+	if err != nil {
+		log.Fatalf("Failed to get game list: %v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"error":   "Internal Server Error",
+			"message": err.Error(),
+		})
+	}
+	c.HTML(http.StatusOK, "game-update.html", gin.H{
+		"games": games,
+	})
+}
+
 func GameList(c *gin.Context) {
 	title := c.Query("title")
 	games, err := service.GetGameList(bson.M{
@@ -51,6 +65,26 @@ func GameList(c *gin.Context) {
 	c.HTML(http.StatusOK, "game-gallery.html", gin.H{
 		"games": games,
 	})
+}
+
+func GameListDetail(c *gin.Context) {
+	title := c.Query("title")
+	games, err := service.GetGameFullDetail(bson.M{
+		"title": bson.M{"$regex": title, "$options": "i"},
+	}, bson.M{"year": -1}, 0)
+	if err != nil {
+		log.Fatalf("Failed to get game list: %v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"error":   "Internal Server Error",
+			"message": err.Error(),
+		})
+	}
+	c.JSON(http.StatusOK, gin.H{
+		"games": games,
+	})
+	// c.HTML(http.StatusOK, "game-gallery.html", gin.H{
+	// 	"games": games,
+	// })
 }
 
 func Insert(c *gin.Context) {
@@ -129,7 +163,7 @@ func InsertMultiple(c *gin.Context) {
 	c.JSON(200, gin.H{"message": "Inserted records successfully"})
 }
 
-func UploadImage(c *gin.Context) {
+func UpdateGame(c *gin.Context) {
 
 	file, header, err := c.Request.FormFile("image")
 	defer file.Close()

@@ -13,10 +13,12 @@ type GameBase struct {
 }
 
 type Game struct {
-	GameBase
-	Year   int    `json:"year"`
-	Genre  string `json:"genre"`
-	Remark string `json:"remark"`
+	ID        primitive.ObjectID `json:"_id" bson:"_id"`
+	Title     string             `json:"title"`
+	GameImage GameImage          `json:"gameImage"`
+	Year      int                `json:"year"`
+	Genre     string             `json:"genre"`
+	Remark    string             `json:"remark"`
 }
 
 type GameImage struct {
