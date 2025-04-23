@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 
 	"my-game-progress/database"
 	game_handler "my-game-progress/handler/game"
@@ -27,7 +28,11 @@ type Package struct {
 }
 
 func main() {
-	err := database.Init()
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatalf("Error loading .env file")
+	}
+	err = database.Init()
 	if err != nil {
 		log.Fatalf("Error initializing database: %v", err)
 		panic(err)

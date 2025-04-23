@@ -232,18 +232,20 @@ func UpdateGame(c *gin.Context) {
 	fmt.Println(hexStr)
 	id, err := primitive.ObjectIDFromHex(hexStr)
 	fmt.Println(id)
+	if err != nil {
+		log.Fatal(err)
+		return
+	}
 
 	filter := bson.M{"_id": id}
 
 	collection := database.DB.Collection("game")
-	if err != nil {
-		log.Fatal(err)
-	}
 
 	// Perform the update
 	result, err := collection.UpdateOne(database.Context, filter, update)
 	if err != nil {
 		log.Fatal(err)
+		return
 	}
 
 	// Return the response

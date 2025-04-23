@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"os"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -16,10 +17,14 @@ var DB *mongo.Database
 
 func Init() error {
 	// Create a context with a timeout
+	DATABASE_URL := os.Getenv("DATABASE_URL")
+	if DATABASE_URL == "" {
+		return fmt.Errorf("DATABASE_URL is not set")
+	}
 	ctx := context.Background()
 
 	// Create a MongoDB client
-	client, err := mongo.Connect(ctx, options.Client().ApplyURI("mongodb://127.0.0.1:27017"))
+	client, err := mongo.Connect(ctx, options.Client().ApplyURI(DATABASE_URL))
 	if err != nil {
 		CloseConnection() // Clean up context if connection fails
 		return fmt.Errorf("failed to connect to MongoDB: %w", err)
