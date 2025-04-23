@@ -64,9 +64,7 @@ func GameList(c *gin.Context) {
 			"message": err.Error(),
 		})
 	}
-	// c.JSON(http.StatusOK, gin.H{
-	// 	"games": games,
-	// })
+
 	c.HTML(http.StatusOK, "game-gallery.html", gin.H{
 		"games": games,
 	})

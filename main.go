@@ -7,25 +7,10 @@ import (
 	"github.com/joho/godotenv"
 
 	"my-game-progress/database"
+	environment_handler "my-game-progress/handler/environment"
 	game_handler "my-game-progress/handler/game"
 	images_handler "my-game-progress/handler/images"
 )
-
-type Package struct {
-	PackageName     string   `json:"packageName"`
-	Price           string   `json:"price"`
-	Time            string   `json:"time"`
-	Icon            string   `json:"icon"`
-	Cap             string   `json:"cap"`
-	BtnMsg          string   `json:"btnMsg"`
-	IsSelect        bool     `json:"isSelect"`
-	Ussd            string   `json:"ussd"`
-	Link            string   `json:"link"`
-	Remark          string   `json:"remark"`
-	ConditionList   []string `json:"conditionList"`
-	ConditionLength int
-	PackageIndex    int
-}
 
 func main() {
 	err := godotenv.Load()
@@ -45,6 +30,7 @@ func main() {
 	api := r.Group("api")
 	image := api.Group("image")
 	game := api.Group("game")
+	environment := api.Group("environment")
 
 	r.GET("/", game_handler.IndexPage)
 	r.GET("/my-progress-list", game_handler.GamePage)
@@ -58,6 +44,11 @@ func main() {
 
 	image.POST("", images_handler.UploadImage)
 	image.GET(":file_id", images_handler.GetImage)
+
+	environment.POST("", environment_handler.Insert)
+	environment.GET(":id", environment_handler.Get)
+	environment.GET("list", environment_handler.GetAll)
+
 	r.Run(":" + "8080")
 }
 

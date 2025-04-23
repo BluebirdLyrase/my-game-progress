@@ -23,14 +23,12 @@ func Init() error {
 	}
 	ctx := context.Background()
 
-	// Create a MongoDB client
 	client, err := mongo.Connect(ctx, options.Client().ApplyURI(DATABASE_URL))
 	if err != nil {
-		CloseConnection() // Clean up context if connection fails
+		CloseConnection()
 		return fmt.Errorf("failed to connect to MongoDB: %w", err)
 	}
 
-	// Verify the connection
 	if err := client.Ping(ctx, nil); err != nil {
 		CloseConnection()
 		return fmt.Errorf("failed to ping MongoDB: %w", err)
@@ -40,7 +38,7 @@ func Init() error {
 	Client = client
 	DB = client.Database("my-game-progress")
 	Context = ctx
-	// collection := database.Collection("Game")
+
 	return nil
 }
 

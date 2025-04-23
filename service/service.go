@@ -7,6 +7,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 
 	"my-game-progress/database"
+	model_environment "my-game-progress/model/environment"
 	"my-game-progress/model/model_game"
 )
 
@@ -42,4 +43,31 @@ func GetGameFullDetail(filter bson.M, sort bson.M, limit int64) ([]model_game.Ga
 	}
 
 	return games, nil
+}
+
+func GetEnvironmentsList() ([]model_environment.Environment, error) {
+	var environments []model_environment.Environment
+	collection := database.DB.Collection("environment")
+
+	opts := options.Find().SetProjection(bson.M{"pc_spec": 0})
+
+	cursor, err := collection.Find(database.Context, bson.M{}, opts)
+	if err != nil {
+		return nil, fmt.Errorf("failed to query environments: %w", err)
+	}
+	defer cursor.Close(database.Context)
+
+	for cursor.Next(database.Context) {
+		var env model_environment.Environment
+		if err := cursor.Decode(&env); err != nil {
+			return nil, fmt.Errorf("failed to decode environment: %w", err)
+		}
+		environments = append(environments, env)
+	}
+
+	if err := cursor.Err(); err != nil {
+		return nil, err
+	}
+
+	return environments, nil
 }

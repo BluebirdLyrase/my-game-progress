@@ -3,23 +3,23 @@ package model_game
 import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 
-	"my-game-progress/model/environment"
+	model_environment "my-game-progress/model/environment"
 )
 
 type GameBase struct {
-	ID        primitive.ObjectID `json:"_id" bson:"_id"`
-	Title     string             `json:"title"`
-	GameImage GameImage          `json:"gameImage"`
+	ID        *primitive.ObjectID `json:"_id" bson:"_id,omitempty"`
+	Title     string              `json:"title"`
+	GameImage GameImage           `json:"gameImage"`
 }
 
 type Game struct {
-	ID        primitive.ObjectID `json:"_id" bson:"_id"`
-	Title     string             `json:"title"`
-	GameImage GameImage          `json:"gameImage"`
-	Year      int                `json:"year"`
-	Genre     string             `json:"genre"`
-	Remark    string             `json:"remark"`
-	Slug      string             `json:"slug"`
+	ID        *primitive.ObjectID `json:"_id" bson:"_id,omitempty"`
+	Title     string              `json:"title"`
+	GameImage GameImage           `json:"gameImage"`
+	Year      int                 `json:"year"`
+	Genre     string              `json:"genre"`
+	Remark    string              `json:"remark"`
+	Slug      string              `json:"slug"`
 }
 
 type GameImage struct {
@@ -28,13 +28,14 @@ type GameImage struct {
 }
 
 type Playthrough struct {
-	Difficulty    string   `json:"difficulty"`
-	DateFinished  string   `json:"dateFinished"` //* DD/MM/YYYY
-	Remark        string   `json:"remark"`
-	Screenshots   []string `json:"screenshots"`
-	Environment   environment.Environment
-	GrandStrategy GrandStrategy
-	RPG           RPG
+	ID           primitive.ObjectID `json:"playthrough_id"` // Unique identifier for the playthrough
+	Difficulty   string             `json:"difficulty"`
+	DateFinished string             `json:"dateFinished"` //* DD/MM/YYYY
+	Remark       string             `json:"remark"`
+	Screenshots  []string           `json:"screenshots"`
+	Environment  model_environment.Environment
+	// GrandStrategy GrandStrategy
+	// RPG           RPG
 }
 
 // *
