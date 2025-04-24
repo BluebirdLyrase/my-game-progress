@@ -3,7 +3,6 @@ package game_handler
 import (
 	"encoding/json"
 	"fmt"
-	"io"
 	"log"
 	"net/http"
 	"strconv"
@@ -11,14 +10,11 @@ import (
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
-	"go.mongodb.org/mongo-driver/mongo/gridfs"
 
 	"my-game-progress/database"
 	"my-game-progress/model/model_game"
 	"my-game-progress/service"
 )
-
-const filePath string = "/api/image/"
 
 func IndexPage(c *gin.Context) {
 	c.HTML(http.StatusOK, "index.html", nil)
@@ -93,45 +89,30 @@ func GameListDetail(c *gin.Context) {
 func Insert(c *gin.Context) {
 
 	file, header, err := c.Request.FormFile("image")
-	defer file.Close()
-	detail := c.Request.FormValue("detail")
-
 	if err != nil {
 		c.JSON(400, gin.H{"error": "Failed to get file"})
 		return
 	}
 
+	detail := c.Request.FormValue("detail")
 	var game model_game.Game
 	err = json.Unmarshal([]byte(detail), &game)
 	if err != nil {
 		log.Fatal(err)
+		c.JSON(400, err)
+		return
+
 	}
 
-	filename := header.Filename
-
-	bucket, err := gridfs.NewBucket(database.DB)
+	fullPath, err := service.UploadImage(file, header)
 	if err != nil {
-		c.JSON(500, gin.H{"error": "Failed to create GridFS bucket"})
+		log.Fatal(err)
+		c.JSON(400, err)
 		return
 	}
-
-	uploadStream, err := bucket.OpenUploadStream(filename)
-	if err != nil {
-		c.JSON(500, gin.H{"error": "Failed to open upload stream"})
-		return
-	}
-	defer uploadStream.Close()
-
-	_, err = io.Copy(uploadStream, file)
-	if err != nil {
-		c.JSON(500, gin.H{"error": "Failed to upload image"})
-		return
-	}
-	fileID := uploadStream.FileID.(primitive.ObjectID)
-
 	collection := database.DB.Collection("game")
 
-	game.GameImage.Cover = filePath + fileID.Hex()
+	game.GameImage.Cover = fullPath
 
 	// document := game
 	_, err = collection.InsertOne(database.Context, game)
@@ -172,34 +153,13 @@ func UpdateGame(c *gin.Context) {
 	var gameCover string
 
 	if file != nil {
+		fullPath, err := service.UploadImage(file, header)
 		if err != nil {
-			c.JSON(400, gin.H{"error": "Failed to get file"})
+			log.Fatal(err)
+			c.JSON(400, err)
 			return
 		}
-		defer file.Close()
-
-		filename := header.Filename
-
-		bucket, err := gridfs.NewBucket(database.DB)
-		if err != nil {
-			c.JSON(500, gin.H{"error": "Failed to create GridFS bucket"})
-			return
-		}
-
-		uploadStream, err := bucket.OpenUploadStream(filename)
-		if err != nil {
-			c.JSON(500, gin.H{"error": "Failed to open upload stream"})
-			return
-		}
-		defer uploadStream.Close()
-
-		_, err = io.Copy(uploadStream, file)
-		if err != nil {
-			c.JSON(500, gin.H{"error": "Failed to upload image"})
-			return
-		}
-		fileID := uploadStream.FileID.(primitive.ObjectID)
-		gameCover = filePath + fileID.Hex()
+		gameCover = fullPath
 	}
 
 	gameID := c.Request.FormValue("game_id")
@@ -210,6 +170,7 @@ func UpdateGame(c *gin.Context) {
 	numYear, err := strconv.Atoi(gameYear)
 	if err != nil {
 		fmt.Println("Error converting string to int numYear:", err)
+		c.JSON(400, err)
 		return
 	}
 
@@ -227,11 +188,10 @@ func UpdateGame(c *gin.Context) {
 	}
 
 	hexStr := gameID[10 : len(gameID)-2]
-	fmt.Println(hexStr)
 	id, err := primitive.ObjectIDFromHex(hexStr)
-	fmt.Println(id)
 	if err != nil {
 		log.Fatal(err)
+		c.JSON(400, err)
 		return
 	}
 
@@ -239,14 +199,13 @@ func UpdateGame(c *gin.Context) {
 
 	collection := database.DB.Collection("game")
 
-	// Perform the update
 	result, err := collection.UpdateOne(database.Context, filter, update)
 	if err != nil {
 		log.Fatal(err)
+		c.JSON(400, err)
 		return
 	}
 
-	// Return the response
 	fmt.Printf("ModifiedCount: %+v\n", result.ModifiedCount)
 	if gameCover != "" {
 		c.HTML(http.StatusOK, "upload-game-images.html", bson.M{"GameCover": gameCover})

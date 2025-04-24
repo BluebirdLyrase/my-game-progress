@@ -2,8 +2,12 @@ package service
 
 import (
 	"fmt"
+	"io"
+	"mime/multipart"
 
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
+	"go.mongodb.org/mongo-driver/mongo/gridfs"
 	"go.mongodb.org/mongo-driver/mongo/options"
 
 	"my-game-progress/database"
@@ -70,4 +74,33 @@ func GetEnvironmentsList() ([]model_environment.Environment, error) {
 	}
 
 	return environments, nil
+}
+
+const filePath string = "/api/image/"
+
+func UploadImage(file multipart.File, header *multipart.FileHeader) (string, error) {
+	defer file.Close()
+
+	filename := header.Filename
+
+	bucket, err := gridfs.NewBucket(database.DB)
+	if err != nil {
+		return "", fmt.Errorf("Failed to create GridFS bucket : %w", err)
+	}
+
+	uploadStream, err := bucket.OpenUploadStream(filename)
+	if err != nil {
+		return "", fmt.Errorf("Failed to open upload stream : %w", err)
+	}
+	defer uploadStream.Close()
+
+	_, err = io.Copy(uploadStream, file)
+	if err != nil {
+		return "", fmt.Errorf("Failed to upload image : %w", err)
+	}
+	fileID := uploadStream.FileID.(primitive.ObjectID)
+
+	fullPath := filePath + fileID.Hex()
+
+	return fullPath, nil
 }

@@ -28,14 +28,21 @@ type GameImage struct {
 }
 
 type Playthrough struct {
-	ID           primitive.ObjectID `json:"playthrough_id"` // Unique identifier for the playthrough
-	Difficulty   string             `json:"difficulty"`
-	DateFinished string             `json:"dateFinished"` //* DD/MM/YYYY
-	Remark       string             `json:"remark"`
-	Screenshots  []string           `json:"screenshots"`
+	ID           *primitive.ObjectID `json:"_id" bson:"_id,omitempty"`
+	Difficulty   string              `json:"difficulty"`
+	DateFinished string              `json:"dateFinished"` //* DD/MM/YYYY
+	Remark       string              `json:"remark"`
+	Screenshots  []string            `json:"screenshots"`
 	Environment  model_environment.Environment
 	// GrandStrategy GrandStrategy
 	// RPG           RPG
+}
+
+type PlaythroughInputParam struct {
+	Difficulty    string `json:"difficulty"`
+	DateFinished  string `json:"dateFinished"` //* DD/MM/YYYY
+	Remark        string `json:"remark"`
+	EnvironmentID string `json:"environmentID"`
 }
 
 // *
