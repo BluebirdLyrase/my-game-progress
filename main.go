@@ -47,7 +47,7 @@ func main() {
 
 	environment.POST("", environment_handler.Insert)
 	environment.GET(":id", environment_handler.Get)
-	environment.GET("list", environment_handler.GetAll)
+	environment.GET("list", environment_handler.GetList)
 
 	r.Run(":" + "8080")
 }

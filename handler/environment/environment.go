@@ -53,7 +53,7 @@ func Get(c *gin.Context) {
 	c.JSON(http.StatusOK, environment)
 }
 
-func GetAll(c *gin.Context) {
+func GetList(c *gin.Context) {
 	environment, err := service.GetEnvironmentsList()
 
 	if err != nil {
@@ -63,6 +63,7 @@ func GetAll(c *gin.Context) {
 			"message": err.Error(),
 		})
 	}
-
-	c.JSON(http.StatusOK, environment)
+	c.HTML(http.StatusOK, "environment-selector.html", gin.H{
+		"environment": environment,
+	})
 }

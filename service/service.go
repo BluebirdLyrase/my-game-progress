@@ -49,11 +49,11 @@ func GetGameFullDetail(filter bson.M, sort bson.M, limit int64) ([]model_game.Ga
 	return games, nil
 }
 
-func GetEnvironmentsList() ([]model_environment.Environment, error) {
-	var environments []model_environment.Environment
+func GetEnvironmentsList() ([]model_environment.EnvironmentDropdown, error) {
+	var environments []model_environment.EnvironmentDropdown
 	collection := database.DB.Collection("environment")
 
-	opts := options.Find().SetProjection(bson.M{"pc_spec": 0})
+	opts := options.Find().SetProjection(bson.M{"name": 1})
 
 	cursor, err := collection.Find(database.Context, bson.M{}, opts)
 	if err != nil {
@@ -62,7 +62,7 @@ func GetEnvironmentsList() ([]model_environment.Environment, error) {
 	defer cursor.Close(database.Context)
 
 	for cursor.Next(database.Context) {
-		var env model_environment.Environment
+		var env model_environment.EnvironmentDropdown
 		if err := cursor.Decode(&env); err != nil {
 			return nil, fmt.Errorf("failed to decode environment: %w", err)
 		}

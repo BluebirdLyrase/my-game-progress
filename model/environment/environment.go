@@ -20,8 +20,13 @@ type Drive struct {
 
 type Environment struct {
 	ID       *primitive.ObjectID `json:"_id" bson:"_id,omitempty"`
-	Platform string              `json:"platform"` // e.g., "Steam", "PS4", "RCPS3"
-	Name     string              `json:"name"`     // e.g., "Gaming PC 2023"
-	Hardware string              `json:"hardware"` // e.g., "PC", "PS4"
-	PCSpec   *PCSpec             `json:"pc_spec"`  // Pointer to PCSpec struct for PC environments
+	Platform string              `json:"platform"`               // e.g., "Steam", "PS4", "RCPS3"
+	Name     string              `json:"name"`                   // e.g., "Gaming PC 2023"
+	Hardware string              `json:"hardware"`               // e.g., "PC", "PS4"
+	PCSpec   *PCSpec             `json:"pc_spec" bson:"pc_spec"` // Pointer to PCSpec struct for PC environments
+}
+
+type EnvironmentDropdown struct {
+	ID   *primitive.ObjectID `json:"_id" bson:"_id,omitempty"`
+	Name string              `json:"name"` // e.g., "Gaming PC 2023"
 }
