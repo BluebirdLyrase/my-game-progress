@@ -1,35 +1,39 @@
 package playthrough
 
 import (
-	"encoding/json"
 	"io"
 	"log"
+	"net/http"
 
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo/gridfs"
 
 	"my-game-progress/database"
-	model_game "my-game-progress/model/game"
+	model_playthrough "my-game-progress/model/playthrough"
 )
 
 const filePath string = "/api/image/"
 
 func Insert(c *gin.Context) {
 
+	var form model_playthrough.PlaythroughInputParam
+	var playthrough model_playthrough.Playthrough
+
+	// Bind form values to struct and validate
+	if err := c.ShouldBind(&form); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"error": err.Error(),
+		})
+		return
+	}
+
 	file, header, err := c.Request.FormFile("image")
 	defer file.Close()
-	detail := c.Request.FormValue("detail")
 
 	if err != nil {
 		c.JSON(400, gin.H{"error": "Failed to get file"})
 		return
-	}
-
-	var game model_game.Game
-	err = json.Unmarshal([]byte(detail), &game)
-	if err != nil {
-		log.Fatal(err)
 	}
 
 	filename := header.Filename
@@ -56,10 +60,15 @@ func Insert(c *gin.Context) {
 
 	collection := database.DB.Collection("game")
 
-	game.GameImage.Cover = filePath + fileID.Hex()
+	playthrough.Difficulty = form.Difficulty
+	playthrough.DateFinished = form.DateFinished
+	playthrough.Remark = form.Remark
+	playthrough.GameID = form.GameID
+	playthrough.EnvironmentID = form.EnvironmentID
+	playthrough.Screenshots[0] = filePath + fileID.Hex()
 
 	// document := game
-	_, err = collection.InsertOne(database.Context, game)
+	_, err = collection.InsertOne(database.Context, playthrough)
 	if err != nil {
 		log.Fatal("Error inserting document:", err)
 	}

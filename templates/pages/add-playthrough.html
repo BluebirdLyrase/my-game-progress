@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADD PLAYTHROUGH</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+    <link href="static/css/select2.min.css" rel="stylesheet" />
+    <script src="static/js/select2.min.js"></script>
+    <script src="static/js/jquery-3.6.0.min.js"></script>
+    <script src="static/js/htmx.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -64,34 +64,34 @@
 </head>
 
 <body>
+    <form hx-post="/api/playthrough" hx-target="#response" hx-swap="innerHTML" enctype="multipart/form-data">
+        <div class="form-container">
 
-    <div class="form-container">
-
-        <!-- Game select dropdown -->
-        <label for="game-select">Select a game:</label>
-        <select id="game-select" name="game" hx-get="/api/game/selector" hx-trigger="load" hx-target="#game-select"
-            hx-swap="innerHTML">
-            <option disabled selected>Loading...</option>
-        </select>
-        <label for="environment-select">Select an environment:</label>
-        <select id="environment-select" name="game" hx-get="/api/environment/selector" hx-trigger="load"
-            hx-target="#environment-select" hx-swap="innerHTML">
-            <option disabled selected>Loading...</option>
-        </select>
-        <label for="date">Choose a date:</label>
-        <input type="date" id="date" name="date">
-        <!-- File input -->
-        <label for="file-upload">Playthrough Image:</label>
-        <input type="file" id="file-upload" name="file-upload">
-        <!-- Title input -->
-        <label for="remark">Remark:</label>
-        <textarea id="remark" name="remark" rows="4" cols="50"></textarea>
-
-        <div style="margin-top: 20px;" />
-        <!-- Submit Button -->
-        <button type="submit">Submit</button>
-    </div>
-
+            <!-- Game select dropdown -->
+            <label for="game-select">Select a game:</label>
+            <select id="game-select" name="game" hx-get="/api/game/selector" hx-trigger="load" hx-target="#game-select"
+                hx-swap="innerHTML">
+                <option disabled selected>Loading...</option>
+            </select>
+            <label for="environment-select">Select an environment:</label>
+            <select id="environment-select" name="game" hx-get="/api/environment/selector" hx-trigger="load"
+                hx-target="#environment-select" hx-swap="innerHTML">
+                <option disabled selected>Loading...</option>
+            </select>
+            <label for="date">Choose a date:</label>
+            <input type="date" id="date" name="date">
+            <!-- Title input -->
+            <label for="remark">Remark:</label>
+            <textarea id="remark" name="remark" rows="4" cols="50"></textarea>
+            <!-- File input -->
+            <label for="file-upload">Playthrough Image:</label>
+            <input type="file" id="file-upload" name="file-upload">
+            <div style="margin-top: 20px;" />
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </div>
+        <div id="response"></div>
+    </form>
     <script>
         $(document).ready(function () {
             // Initialize Select2 for searchable dropdown

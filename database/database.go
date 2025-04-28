@@ -18,25 +18,32 @@ var DB *mongo.Database
 func Init() error {
 	// Create a context with a timeout
 	DATABASE_URL := os.Getenv("DATABASE_URL")
+	DATABASE_NAME := os.Getenv("DATABASE_NAME")
+
 	if DATABASE_URL == "" {
 		return fmt.Errorf("DATABASE_URL is not set")
 	}
+
+	if DATABASE_NAME == "" {
+		return fmt.Errorf("DATABASE_NAME is not set")
+	}
+
 	ctx := context.Background()
 
 	client, err := mongo.Connect(ctx, options.Client().ApplyURI(DATABASE_URL))
 	if err != nil {
-		CloseConnection()
+		// CloseConnection()
 		return fmt.Errorf("failed to connect to MongoDB: %w", err)
 	}
 
 	if err := client.Ping(ctx, nil); err != nil {
-		CloseConnection()
+		// CloseConnection()
 		return fmt.Errorf("failed to ping MongoDB: %w", err)
 	}
 
 	log.Println("Connected to MongoDB")
 	Client = client
-	DB = client.Database("my-game-progress")
+	DB = client.Database(DATABASE_NAME)
 	Context = ctx
 
 	return nil

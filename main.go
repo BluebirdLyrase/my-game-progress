@@ -10,6 +10,7 @@ import (
 	environment_handler "my-game-progress/handler/environment"
 	game_handler "my-game-progress/handler/game"
 	images_handler "my-game-progress/handler/images"
+	playthrough_handler "my-game-progress/handler/playthrough"
 	webpage_handler "my-game-progress/handler/webpage"
 )
 
@@ -32,6 +33,7 @@ func main() {
 	image := api.Group("image")
 	game := api.Group("game")
 	environment := api.Group("environment")
+	playthrough := api.Group("playthrough")
 
 	r.GET("/", webpage_handler.IndexPage)
 	r.GET("/my-progress-list", webpage_handler.GamePage)
@@ -52,6 +54,8 @@ func main() {
 	environment.POST("", environment_handler.Insert)
 	environment.GET(":id", environment_handler.Get)
 	environment.GET("selector", environment_handler.GeSelector)
+
+	playthrough.POST("", playthrough_handler.Insert)
 
 	r.Run(":" + "8080")
 }
