@@ -12,41 +12,9 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 
 	"my-game-progress/database"
-	"my-game-progress/model/model_game"
+	model_game "my-game-progress/model/game"
 	"my-game-progress/service"
 )
-
-func IndexPage(c *gin.Context) {
-	c.HTML(http.StatusOK, "index.html", nil)
-}
-
-func GamePage(c *gin.Context) {
-	games, err := service.GetGameList(bson.M{}, bson.M{"year": -1}, 30)
-	if err != nil {
-		log.Fatalf("Failed to get game list: %v", err)
-		c.JSON(http.StatusInternalServerError, gin.H{
-			"error":   "Internal Server Error",
-			"message": err.Error(),
-		})
-	}
-	c.HTML(http.StatusOK, "my-progress-list.html", gin.H{
-		"games": games,
-	})
-}
-
-func EditPage(c *gin.Context) {
-	games, err := service.GetGameFullDetail(bson.M{}, bson.M{"year": -1}, 30)
-	if err != nil {
-		log.Fatalf("Failed to get game list: %v", err)
-		c.JSON(http.StatusInternalServerError, gin.H{
-			"error":   "Internal Server Error",
-			"message": err.Error(),
-		})
-	}
-	c.HTML(http.StatusOK, "game-update.html", gin.H{
-		"games": games,
-	})
-}
 
 func GameList(c *gin.Context) {
 	title := c.Query("title")
@@ -59,9 +27,26 @@ func GameList(c *gin.Context) {
 			"error":   "Internal Server Error",
 			"message": err.Error(),
 		})
+		return
 	}
 
 	c.HTML(http.StatusOK, "game-gallery.html", gin.H{
+		"games": games,
+	})
+}
+
+func GameSelector(c *gin.Context) {
+	games, err := service.GetGameList(nil, bson.M{"title": -1}, 0)
+	if err != nil {
+		log.Fatalf("Failed to get game list: %v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"error":   "Internal Server Error",
+			"message": err.Error(),
+		})
+		return
+	}
+
+	c.HTML(http.StatusOK, "game-selector.html", gin.H{
 		"games": games,
 	})
 }
@@ -77,13 +62,11 @@ func GameListDetail(c *gin.Context) {
 			"error":   "Internal Server Error",
 			"message": err.Error(),
 		})
+		return
 	}
 	c.JSON(http.StatusOK, gin.H{
 		"games": games,
 	})
-	// c.HTML(http.StatusOK, "game-gallery.html", gin.H{
-	// 	"games": games,
-	// })
 }
 
 func Insert(c *gin.Context) {

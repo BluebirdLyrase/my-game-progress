@@ -53,7 +53,7 @@ func Get(c *gin.Context) {
 	c.JSON(http.StatusOK, environment)
 }
 
-func GetList(c *gin.Context) {
+func GeSelector(c *gin.Context) {
 	environment, err := service.GetEnvironmentsList()
 
 	if err != nil {

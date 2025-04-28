@@ -10,7 +10,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/gridfs"
 
 	"my-game-progress/database"
-	"my-game-progress/model/model_game"
+	model_game "my-game-progress/model/game"
 )
 
 const filePath string = "/api/image/"

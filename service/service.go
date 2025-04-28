@@ -12,7 +12,7 @@ import (
 
 	"my-game-progress/database"
 	model_environment "my-game-progress/model/environment"
-	"my-game-progress/model/model_game"
+	model_game "my-game-progress/model/game"
 )
 
 func GetGameList(filter bson.M, sort bson.M, limit int64) ([]model_game.GameBase, error) {

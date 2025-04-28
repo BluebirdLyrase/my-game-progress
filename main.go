@@ -10,6 +10,7 @@ import (
 	environment_handler "my-game-progress/handler/environment"
 	game_handler "my-game-progress/handler/game"
 	images_handler "my-game-progress/handler/images"
+	webpage_handler "my-game-progress/handler/webpage"
 )
 
 func main() {
@@ -32,11 +33,14 @@ func main() {
 	game := api.Group("game")
 	environment := api.Group("environment")
 
-	r.GET("/", game_handler.IndexPage)
-	r.GET("/my-progress-list", game_handler.GamePage)
-	r.GET("/update-game", game_handler.EditPage)
+	r.GET("/", webpage_handler.IndexPage)
+	r.GET("/my-progress-list", webpage_handler.GamePage)
+	r.GET("/update-game", webpage_handler.EditPage)
+	r.GET("/add-info", webpage_handler.AddInfoPage)
+	r.GET("/add-playthrough", webpage_handler.AddPlaythroughPage)
 
 	game.GET("list", game_handler.GameList)
+	game.GET("selector", game_handler.GameSelector)
 	game.GET("list-detail", game_handler.GameListDetail)
 	game.POST("", game_handler.Insert)
 	game.POST("multiple", game_handler.InsertMultiple)
@@ -47,7 +51,7 @@ func main() {
 
 	environment.POST("", environment_handler.Insert)
 	environment.GET(":id", environment_handler.Get)
-	environment.GET("list", environment_handler.GetList)
+	environment.GET("selector", environment_handler.GeSelector)
 
 	r.Run(":" + "8080")
 }

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD PLAYTHROUGH</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <!-- Game select dropdown -->
+        <label for="game-select">Select a game:</label>
+        <select id="game-select" name="game" hx-get="/api/game/selector" hx-trigger="load" hx-target="#game-select"
+            hx-swap="innerHTML">
+            <option disabled selected>Loading...</option>
+        </select>
+        <label for="environment-select">Select an environment:</label>
+        <select id="environment-select" name="game" hx-get="/api/environment/selector" hx-trigger="load"
+            hx-target="#environment-select" hx-swap="innerHTML">
+            <option disabled selected>Loading...</option>
+        </select>
+        <label for="date">Choose a date:</label>
+        <input type="date" id="date" name="date">
+        <!-- File input -->
+        <label for="file-upload">Playthrough Image:</label>
+        <input type="file" id="file-upload" name="file-upload">
+        <!-- Title input -->
+        <label for="remark">Remark:</label>
+        <textarea id="remark" name="remark" rows="4" cols="50"></textarea>
+
+        <div style="margin-top: 20px;" />
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Initialize Select2 for searchable dropdown
+            $('#game-select').select2({
+                placeholder: "Search or select an option",
+                allowClear: true
+            });
+
+            $('#environment-select').select2({
+                placeholder: "Search or select an option",
+                allowClear: true
+            });
+        });
+    </script>
+
+</body>
+
+</html>
